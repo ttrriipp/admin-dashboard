@@ -2,6 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: fredoka, sans-serif;
+}
+
+@font-face {
+    font-family: 'fredoka';
+    src: url(fonts/Fredoka-Regular.woff),
+        url(fonts/Fredoka-Regular.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'unna';
+    src: url(fonts/Unna-Regular.woff),
+        url(fonts/Unna-Regular.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+p,
+span {
+    font-family: unna, serif;
 }
 
 body {
