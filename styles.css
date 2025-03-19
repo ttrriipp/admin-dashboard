@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.sidebar {
+    grid-row: span 2;
+}
+
+img {
+    cursor: pointer;
+}
+
+img.icon {
+    height: 24px;
+}
+
+.dashboard-title>img,
+.greeting>img {
+    height: 48px;
+}
+
+.mini-profile-pic {
+    height: 36px;
+}
+
+.navigation>ul>li {
+    cursor: pointer;
+    list-style: none;
+}
