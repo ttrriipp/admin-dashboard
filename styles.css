@@ -26,15 +26,6 @@ span {
     font-family: unna, serif;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-.sidebar {
-    grid-row: span 2;
-}
-
 img {
     cursor: pointer;
 }
@@ -52,7 +43,41 @@ img.icon {
     height: 36px;
 }
 
-.navigation>ul>li {
+li {
     cursor: pointer;
     list-style: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar {
+    grid-row: span 2;
+    background-color: hsl(34, 81%, 60%);
+    display: grid;
+    align-content: start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.dashboard-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navigation>ul {
+    display: grid;
+    gap: 10px;
+}
+
+.navigation>ul>li {
+    display: flex;
+    gap: 25px;
+    font-weight: bold;
+    font-family: fredoka, sans-serif;
+    font-size: 1.5em;
+    margin-left: 10px;
 }
