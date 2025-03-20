@@ -55,7 +55,8 @@ li {
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    background-color: #e3e8ef;
 }
 
 .sidebar {
@@ -65,6 +66,11 @@ body {
     align-content: start;
     gap: 30px;
     padding: 20px;
+    color: white;
+}
+
+.sidebar img {
+    filter: invert(1) brightness(100%) sepia(1) saturate(100%) hue-rotate(0deg);
 }
 
 .dashboard-title {
@@ -97,7 +103,8 @@ header {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     padding: 20px 40px;
-    box-shadow: 0 1px 5px gray;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(179, 175, 175);
 }
 
 .search {
@@ -116,33 +123,38 @@ header {
 }
 
 .user-info {
+    justify-self: end;
     display: flex;
     gap: 30px;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
 }
+
 
 .greeting {
     display: grid;
-    grid: 1fr 1fr / 1fr 9fr;
+    grid: 1fr 2fr / 1fr 9fr;
     justify-items: start;
+    align-self: start;
 }
 
 .greeting>img {
     border-radius: 50%;
     grid-row: span 2;
+    margin-right: 10px;
 }
 
 .greeting p {
     font-family: fredoka, sans-serif;
-    align-self: end;
     font-weight: bold;
 }
 
 .actions ul {
+    justify-self: end;
     display: flex;
     gap: 30px;
-    justify-content: end;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .actions button {
@@ -157,4 +169,85 @@ header {
 
 .actions button:hover {
     background-color: hsl(34, 81%, 50%);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: rows;
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects {
+    grid-row: span 2;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 185px;
+    justify-content: space-between;
+    border-left: 8px hsl(218, 80%, 60%) solid;
+    box-shadow: 2px 2px 5px rgb(179, 175, 175);
+}
+
+.project-card>div:last-child {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+
+.announcements-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+    box-shadow: 2px 2px 5px rgb(179, 175, 175);
+}
+
+.announcement-tab {
+    padding: 10px 5px;
+}
+
+.trending-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 2px 2px 5px rgb(179, 175, 175);
+}
+
+.trending-tab {
+    display: flex;
+}
+
+.trending-tab .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info span:last-child {
+    color: hsl(0, 0%, 30%);
+}
+
+.trending-tab img {
+    grid-row: span 2;
+    height: 48px;
+    margin-right: 10px;
 }
