@@ -34,13 +34,17 @@ img.icon {
     height: 24px;
 }
 
-.dashboard-title>img,
-.greeting>img {
+.dashboard-title>img {
     height: 48px;
+}
+
+.greeting>img {
+    height: 60px;
 }
 
 .mini-profile-pic {
     height: 36px;
+    border-radius: 50%;
 }
 
 li {
@@ -51,6 +55,7 @@ li {
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 .sidebar {
@@ -73,11 +78,83 @@ body {
     gap: 10px;
 }
 
-.navigation>ul>li {
+.navigation li {
     display: flex;
     gap: 25px;
     font-weight: bold;
-    font-family: fredoka, sans-serif;
+
     font-size: 1.5em;
     margin-left: 10px;
+}
+
+.navigation span {
+    font-family: fredoka, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 1px 5px gray;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+}
+
+.search>input {
+    height: 2em;
+    border: none;
+    background-color: hsl(0, 0%, 85%);
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.user-info {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: end;
+}
+
+.greeting {
+    display: grid;
+    grid: 1fr 1fr / 1fr 9fr;
+    justify-items: start;
+}
+
+.greeting>img {
+    border-radius: 50%;
+    grid-row: span 2;
+}
+
+.greeting p {
+    font-family: fredoka, sans-serif;
+    align-self: end;
+    font-weight: bold;
+}
+
+.actions ul {
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+}
+
+.actions button {
+    background-color: hsl(34, 81%, 60%);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: hsl(34, 81%, 50%);
 }
